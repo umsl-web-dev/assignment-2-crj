@@ -1,5 +1,5 @@
 :root{
-    --primary-color:orange;
+    --primary-color:rgb(243, 122, 9);
     --another-color: rgb(17, 17, 16);
 }
 
@@ -12,7 +12,7 @@
 body{
     font-family: 'Arial', sans-serif;
     --webkit-font-smoothing: antialiased;
-    background: rgb(131, 128, 125);
+    background: rgb(15, 15, 15);
     color: grey;
 }
 
@@ -24,7 +24,8 @@ h1,
 h2,
 h3,
 h4{
-    color: white;
+    /* color: white; */
+    color: rgb(218, 201, 183);
 }
 
 a{
@@ -44,10 +45,8 @@ img{
     width: 100%;
     height: 93vh;
     position: relative;
-    background: url('img/background4.jpg') no-repeat center center/cover;
+    background: url('https://i.ibb.co/BZdqby2/background1.jpg') no-repeat center center/cover;
 }
-
-/*
 .showcase::after{
     content: '';
     position: absolute;
@@ -56,20 +55,20 @@ img{
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(0,0,0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px black, inset -120px -100px 250px black;
 }
-*/
 
 .showcase-top{
     position: relative;
     height: 90px;
-    /*z-index: 2;*/
+    z-index: 2;
 }
 
 .showcase-top img{
     width: 170px;
     position: absolute;
-    top:50%;
+    top:70%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
@@ -83,6 +82,9 @@ img{
 
 .showcase-content{
     position: relative;
+    z-index: 2;
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -93,7 +95,7 @@ img{
 }
 
 .showcase-content h1{
-    font-weight: 700;
+    font-weight: 750;
     font-size: 3.5rem;
     line-height: 1.1rem;
     margin: 0 0 2rem;
@@ -101,9 +103,9 @@ img{
 
 .showcase-content p{
     text-transform: uppercase;
-    color: white;
+    color: rgb(243, 212, 177);
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.25;
     margin: 0 0 2 rem;
 }
@@ -112,7 +114,7 @@ img{
 .tabs{
     background: var(--another-color);
     padding-top: 1rem;
-    border-bottom: 3px solid rgb(203, 203, 212);
+    border-bottom: 3px solid #3d3c3c;
 }
 
 .tabs .container{
@@ -122,6 +124,66 @@ img{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.tabs p{
+    font-size: 1.0rem;
+    padding-top: 0.1rem;
+}
+
+.tabs .container > div{
+    padding: 0.8rem 0;
+}
+
+.tabs .container > div:hover{
+    color: rgb(250, 127, 12);
+    cursor: pointer;
+}
+
+.tab-border{
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+/* Tab Content */
+
+.tab-content{
+    padding: 3rem 0;
+    color: rgb(204, 183, 166);
+}
+
+#tab-1-content .tab-1-content-inner{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.container{
+    max-width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+/* Text Styles */
+.text-xl{
+    font-size: 1.8rem;
+    margin-bottom: 1rem; 
+}
+
+.text-lg{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-dark{
+    color: rgb(243, 212, 177);
 }
 
 /* Buttons */
@@ -135,6 +197,7 @@ img{
     border: none;
     cursor: pointer;
     margin-right: 0.5rem;
+    margin-top: 1.0rem;
     outline: none;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
     border-radius: 2px;
@@ -149,7 +212,7 @@ img{
 }
 
 .btn-xl{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     padding: 1.0rem 1.3rem;
     text-transform: uppercase;
 }
