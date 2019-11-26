@@ -1,21 +1,34 @@
 let users = [];
 
-test = () => {
-    console.log(users);
-    let newUser = {
-        "username": document.getElementById('username').value,
-        "password": document.getElementById('password').value,
-        "firstName": document.getElementById('firstname').value,
-        "lastName": document.getElementById('lastname').value
-    }
+createUser = () => {
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let firstName = document.getElementById('firstname').value;
+    let lastName = document.getElementById('lastname').value;
+    let createFlag = true;
 
-    saveToLocalStorage(newUser);
+    users.forEach(user => {
+        if (user.username === username) {
+            alert('Please choose a different username');
+            createFlag = false;
+        }
+    });
+
+    if (createFlag === true) {
+        let newUser = {
+            "username": username,
+            "password": password,
+            "firstName": firstName,
+            "lastName": lastName
+        }
+
+        saveToLocalStorage(newUser);
+    }
 }
 
 saveToLocalStorage = (user) => {
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users));
-    console.log(users);
 }
 
 window.onload = () => {
