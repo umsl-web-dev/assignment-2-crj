@@ -1,38 +1,39 @@
 let users = [];
 
 createUser = () => {
-    let username = document.getElementById('username').value;
+    let username = document.getElementById('username').value.toLowerCase();
     let password = document.getElementById('password').value;
     let firstName = document.getElementById('firstname').value;
     let lastName = document.getElementById('lastname').value;
-    let createFlag = true;
+    let createNewUser = true;
 
     users.forEach(user => {
         if (user.username === username) {
-            alert('Please choose a different username');
-            createFlag = false;
+            alert('Please choose a different username. "' + username + '" is already in use.');
+            createNewUser = false;
         }
     });
 
-    if (createFlag === true) {
+    if (createNewUser === true) {
         let newUser = {
             "username": username,
             "password": password,
             "firstName": firstName,
-            "lastName": lastName
+            "lastName": lastName,
+            "loggedOn": true
         }
 
         saveToLocalStorage(newUser);
     }
 }
 
-saveToLocalStorage = (user) => {
-    users.push(user);
+saveToLocalStorage = (newUser) => {
+    users.push(newUser);
     localStorage.setItem('users', JSON.stringify(users));
 }
 
 window.onload = () => {
-    const admin = { username: 'admin', password: 'admin', firstName: 'admin', lastName: 'user' };
+    const admin = { username: 'admin', password: 'admin', firstName: 'admin', lastName: 'user', loggedOn: false };
     users.push(admin);
     localStorage.setItem('users', JSON.stringify(users));
     users = JSON.parse(localStorage.getItem("users"));
