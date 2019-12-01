@@ -1,10 +1,25 @@
 let users = [];
 
 window.onload = () => {
+    users = JSON.parse(localStorage.getItem("users"));
+
+    if (users === null) {
+    users = [];
     const admin = { username: 'admin', password: 'admin', firstName: 'admin', lastName: 'user', loggedOn: false };
     users.push(admin);
     localStorage.setItem('users', JSON.stringify(users));
-    users = JSON.parse(localStorage.getItem("users"));
+    }
+
+    isLoggedOn();
+}
+
+isLoggedOn = () => {
+    users.forEach(user => {
+        if (user.loggedOn === true){
+            document.getElementById('signUpId').style.display = "none";
+            document.getElementById('signInId').style.display = "none";
+        }
+    });
 }
 
 const tabItems = document.querySelectorAll('.tab-item');

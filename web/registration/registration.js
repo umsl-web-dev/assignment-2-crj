@@ -1,5 +1,9 @@
 let users = [];
 
+window.onload = () => {
+    users = JSON.parse(localStorage.getItem("users"));
+}
+
 createUser = () => {
     let username = document.getElementById('username').value.toLowerCase();
     let password = document.getElementById('password').value;
