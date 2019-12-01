@@ -13,9 +13,25 @@ window.onload = () => {
     isLoggedOn();
 }
 
+redirectTo = () => {
+    let loggedOn = false;
+    users.forEach(user => {
+        if (user.loggedOn === true) {
+            loggedOn = true;
+        }
+    });
+
+    if (loggedOn === true) {
+        window.open('../store/store.html', '_self');
+    } else {
+        window.open('../login/login.html', '_self');
+    }
+
+}
+
 isLoggedOn = () => {
     users.forEach(user => {
-        if (user.loggedOn === true){
+        if (user.loggedOn === true) {
             document.getElementById('signUpId').style.display = "none";
             document.getElementById('signInId').style.display = "none";
         }
