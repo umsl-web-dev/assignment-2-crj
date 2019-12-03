@@ -1,37 +1,20 @@
 body{
     margin: 0;
     padding: 0;
+    padding-bottom: 30px;
     font-family: poppins;
     background-image: url('https://i.ibb.co/BZdqby2/background1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
 }
 
-.wrapper{
+
+.box{
     background-color: rgba(255, 255, 255, 0.658);
-    width: 800px;
-    height: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    border: 1px solid;
+    padding: 10px;
 }
 
-.wrapper:before{
-    content:  '';
-    width: 350px;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
+.row {
+    margin-bottom: 10px;
 }
-
-.header-area img{
-   
-    width: 23%;
-    position: absolute;
-    top:20%;
-    left:20%;
-    transform: translate(-50%,-50%);
-}
-
-
