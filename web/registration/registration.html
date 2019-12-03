@@ -1,18 +1,124 @@
-<body>
-  <script src="registration.js"></script>
-    First name:<br />
-    <input type="text" name="firstname" id="firstname" />
-    <br />
-    Last name:<br />
-    <input type="text" name="lastname" id="lastname" />
-    <br />
-    Username:<br />
-    <input type="text" name="username" id="username" />
-    <br />
-    Password:<br />
-    <input type="text" name="password" id="password" />
-    <br />
-    <br />
-    <button onclick="createUser()" type="button">Register!</button>
-    <a href="../home/home.html">here</a>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="registration.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c974679a5f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <script src="registration.js"></script>
+    <div class="container">
+      <br />
+      <br />
+      <br />
+      <div class="box">
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <img src="https://i.ibb.co/zRNWjt4/logo.png" alt="logo" />
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <i class="fa fa-user"></i>
+            <label> Username:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Enter Username"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <i class="fa fa-key"></i><label> Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <i class="fa fa-key"></i><label> Confirm Password:</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Confirm Password"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <i class="fa fa-user"></i>
+            <label> Full Name:</label>
+            <input
+              id="name"
+              type="text"
+              class="form-control"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <i class="fa fa-envelope"></i><label> Email:</label>
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="Enter Email Address"
+            />
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+            <input id="agree" type="checkbox" />
+            <label for="agree">I Agree to the Terms And Conditions</label>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <button onclick="createUser()" type="button" class="btn btn-dark btn-lg btn-block">
+              Register
+            </button>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
