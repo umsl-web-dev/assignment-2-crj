@@ -8,28 +8,28 @@ var phonenumber = document.getElementById("phonenumber")
 
 function newElement()
 {
-    if(username == "")
+    if(username === "")
     {
         alert("Please fill all blanks.")
         
     }
 
-    if(email == "")
+    if(email === "")
     {
         alert("Please fill all blanks.") 
     }
 
-    if(password == "")
+    if(password === "")
     {
         alert("Please fill all blanks.")
     }
 
-    if(password2 =="")
+    if(password2 ==="")
     {
         alert("Please fill all blanks.")    
     }
 
-    if(phonenumber == "")
+    if(phonenumber === "")
     {
         alert("Please fill all blanks.")
     }
