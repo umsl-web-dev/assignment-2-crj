@@ -24,17 +24,15 @@ login = () => {
 
     users.forEach(user => {
         if (user.password === password && user.username === username) {
-            successful = true;
-        }
-        else {
-            alert('username or password was incorrect! Please try again');
-        }
-
-        if (successful === true) {
             user.loggedOn = true;
             localStorage.setItem('users', JSON.stringify(users));
-            
+
+            successful = true;
             window.open('../store/store.html', '_self');
         }
-    })
+    });
+
+    if (successful === false) {
+        alert('username or password was incorrect! Please try again');
+    }
 }
