@@ -16,3 +16,25 @@ redirectTo = () => {
         window.open('../home/home.html', '_self');
     }
 }
+
+login = () => {
+    let successful = false;
+    let username = document.getElementById('username').value.toLowerCase();
+    let password = document.getElementById('password').value;
+
+    users.forEach(user => {
+        if (user.password === password && user.username === username) {
+            successful = true;
+        }
+        else {
+            alert('username or password was incorrect! Please try again');
+        }
+
+        if (successful === true) {
+            user.loggedOn = true;
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            window.open('../store/store.html', '_self');
+        }
+    })
+}

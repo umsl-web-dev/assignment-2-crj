@@ -2,7 +2,8 @@ body{
     margin: 0;
     padding: 0;
     padding-bottom: 30px;
-    font-family: poppins;
+    font-family: poppins !important;
+    font-size: 18px !important;
     background-image: url('https://i.ibb.co/BZdqby2/background1.jpg');
     -webkit-background-size: cover;
     background-size: cover;

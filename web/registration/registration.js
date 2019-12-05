@@ -22,27 +22,39 @@ redirectTo = () => {
 createUser = () => {
     let username = document.getElementById('username').value.toLowerCase();
     let password = document.getElementById('password').value;
-    let firstName = document.getElementById('firstname').value;
-    let lastName = document.getElementById('lastname').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
     let createNewUser = true;
 
-    users.forEach(user => {
-        if (user.username === username) {
-            alert('Please choose a different username. "' + username + '" is already in use.');
-            createNewUser = false;
-        }
-    });
+    if (username === '' || password === '' || name === '' || email === '' || phone === '') {
+        alert('Please fill out every field');
+        createNewUser = false;
+    }
+    else {
+
+        users.forEach(user => {
+            if (user.username === username) {
+                alert('Please choose a different username. "' + username + '" is already in use.');
+                createNewUser = false;
+            }
+        });
+
+    }
 
     if (createNewUser === true) {
         let newUser = {
             "username": username,
             "password": password,
-            "firstName": firstName,
-            "lastName": lastName,
+            "fullName": name,
+            "email": email,
+            "phone": phone,
             "loggedOn": true
         }
 
         saveToLocalStorage(newUser);
+
+        window.open('../store/store.html', '_self');
     }
 }
 

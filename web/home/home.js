@@ -5,7 +5,7 @@ window.onload = () => {
 
     if (users === null) {
     users = [];
-    const admin = { username: 'admin', password: 'admin', firstName: 'admin', lastName: 'user', loggedOn: false };
+    const admin = { username: 'admin', password: 'admin', fullName: 'admin user', email: ' ', phone: '', loggedOn: false };
     users.push(admin);
     localStorage.setItem('users', JSON.stringify(users));
     }
@@ -34,8 +34,20 @@ isLoggedOn = () => {
         if (user.loggedOn === true) {
             document.getElementById('signUpId').style.display = "none";
             document.getElementById('signInId').style.display = "none";
+            document.getElementById('signOffId').style.display = "block";
         }
     });
+}
+
+signOff = () => {
+    users.forEach(user => {
+        if (user.loggedOn === true) {
+            user.loggedOn = false;
+            localStorage.setItem('users', JSON.stringify(users));
+            
+            window.open('../home/home.html', '_self');
+        }       
+    })
 }
 
 const tabItems = document.querySelectorAll('.tab-item');
