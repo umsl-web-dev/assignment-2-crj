@@ -13,7 +13,7 @@ redirectTo = () => {
     });
 
     if (loggedOn === true) {
-        window.open('../home/home.html', '_self');
+        window.open('../store/store.html', '_self');
     }
 }
 
