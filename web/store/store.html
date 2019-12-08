@@ -1,3 +1,119 @@
-<body>
-    <script src="store.js"></script>
-</body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Store</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="store.css" />
+        <script src="store.js" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="main-nav nav">
+                <ul>
+                    <li><a href="../home/home.html">HOME</a></li>
+                    <li><a href="store.html">STORE</a></li>
+                    <li><a onclick="signOff()">SIGN OUT</a></li>
+                </ul>
+            </nav>
+            <img src="../store/img/logo.png" class="name">
+            
+        </header>
+        <section class="container content-section">
+            <h2 class="section-header">AVAILABLE EMPLOYEES</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Web Designer</span>
+                    <img class="shop-item-image" src="../store/img/deadpool.jpeg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$50/hour</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Cyber Security Analyst</span>
+                    <img class="shop-item-image" src="../store/img/detpika.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$40/hour</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Data Analyst</span>
+                    <img class="shop-item-image" src="../store/img/ryan-reynolds.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$45/hour</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Application developer</span>
+                    <img class="shop-item-image" src="../store/img/peter.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$45/hour</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Network Engineer</span>
+                    <img class="shop-item-image" src="../store/img/sponge.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$55/hour</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">UX Reacher</span>
+                    <img class="shop-item-image" src="../store/img/chocolate-patrick-star.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$40/hour</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+        <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">JOB TITLE</span>
+                <span class="cart-price cart-header cart-column">WAGE</span>
+                <span class="cart-quantity cart-header cart-column">HOURS</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">HIRE!</button>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3 class="band-name">FIRST LITE</h3>
+                <ul class="nav footer-nav">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="../store/img/facebook.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com" target="_blank">        
+                                <img src="../store/img/linkedin.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.intagram.com" target="_blank">
+                            <img src="../store/img/instagram.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="../store/img/twitter.png">
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
