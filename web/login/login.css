@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: poppins !important;
     font-size: 18px !important;
-    background-image: url('https://i.ibb.co/BZdqby2/background1.jpg');
+    background: url('https://i.ibb.co/BZdqby2/background1.jpg');
     -webkit-background-size: cover;
     background-size: cover;
 }

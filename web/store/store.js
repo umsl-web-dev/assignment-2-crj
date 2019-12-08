@@ -2,7 +2,8 @@ let users = [];
 
 window.onload = () => {
     users = JSON.parse(localStorage.getItem("users"));
-
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    cartItems.removeChild(cartItems.firstChild);
     redirectTo();
 }
 
@@ -48,12 +49,18 @@ function ready() {
 }
 
 function purchaseClicked() {
-    alert('Thank you for hiring')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
-        cartItems.removeChild(cartItems.firstChild)
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    
+    if(cartItems.firstChild === null) {
+        alert('Please select a user before hiring');
     }
-    updateCartTotal()
+    else {
+        alert('Thank you for using our services to hire for your next project!');
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild);
+    }
+    updateCartTotal();
+    }
 }
 
 function removeCartItem(event) {
